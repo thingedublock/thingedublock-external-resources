@@ -23,7 +23,8 @@ function getInterfaceTranslations () {
             "ps2.name": "PS2 無線遙控器",
             "ps2.description": "使用4根信號線的 PS2 無線遙控器。"
         }
-    };
+    }
+    ;
 }
 
 function registerScratchExtensionTranslations () {

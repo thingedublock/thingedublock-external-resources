@@ -1,0 +1,11 @@
+{
+    "THINGBOT_CATEGORY": "ThingBot",
+    "THINGBOT_PWM_INIT": "init PWM on ThingBot",
+    "THINGBOT_SET_MOTOR": "set motor %1 go %2 at speed %3",
+    "THINGBOT_SET_SERVO": "set servo %1 to angle %2",
+    "THINGBOT_INIT_MPU": "init MPU accelerometer range %1 gyro range %2 bandwidth %3",
+    "THINGBOT_MPU_READ_DATA": "thingbot mpu read data",
+    "THINGBOT_ACCEL": "mpu %1 axis acceleration (m/s^2)",
+    "THINGBOT_GYRO": "mpu %1 axis rotation (°/s)",
+    "THINGBOT_TEMP": "mpu temperature (°C)"
+}
