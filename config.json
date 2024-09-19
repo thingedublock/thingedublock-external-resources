@@ -2,7 +2,7 @@
     "updater": {
         "default": {
             "provider": "github",
-            "repo": "openblockcc/external-resources-v3"
+            "repo": "lgthevinh/thingedublock-external-resources"
         },
         "cn": {
             "provider": "gitee",
