@@ -1,0 +1,8 @@
+{
+    "THING_CATEGORY": "THING Block",
+    "THING_INIT": "init board",
+    "THING_SET_MOTOR": "set motor %1",
+    "THING_BUZZER": "set buzzer %1",
+    "THING_STOP_BUZZER": "stop buzzer",
+    "THING_SET_LED": "set led %1 %2"
+}
