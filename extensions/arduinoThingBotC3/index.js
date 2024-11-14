@@ -3,9 +3,9 @@
 const arduinoThingBotC3 = () => ({
     name: 'ThingBot',
     extensionId: 'arduinoThingBotC3',
-    version: '1.0.0',
+    version: '2.0.0',
     supportDevice: ['thingBot_esp32C3', 'thingBot_arduinoEsp32C3'],
-    author: 'MakerViet - ThingEdu',
+    author: 'ThingEdu - Rogo Solutions',
     blocks: 'blocks.js',
     generator: 'generator.js',
     toolbox: 'toolbox.js',

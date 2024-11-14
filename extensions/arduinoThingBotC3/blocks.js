@@ -1,8 +1,9 @@
 /* eslint-disable */
 
 function registerBlocks(Blockly) {
-    const color = '#000080';
-    const secondaryColor = '#FF4D6A';
+    const color = '#009933';
+    const actuatorColor = '#cc0000';
+    const electronicColor = '#6600ff';
 
     Blockly.Blocks.thingBotC3_motorInit = {
         init: function () {
@@ -42,12 +43,12 @@ function registerBlocks(Blockly) {
                         type: 'input_value',
                         name: 'SPEED',
                         min: 0,
-                        max: 4096,
+                        max: 100,
                         precision: 1,
                         check: 'Number'
                     }
                 ],
-                colour: '#FF0000',
+                colour: actuatorColor,
                 extensions: ['shape_statement']
             });
         }
@@ -78,7 +79,56 @@ function registerBlocks(Blockly) {
                         check: 'Number'
                     }
                 ],
-                colour: '#FF0000',
+                colour: actuatorColor,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.thingBotC3_buzzer = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.THINGBOTC3_BUZZER,
+                args0: [
+                    {
+                        type: 'input_value',
+                        name: 'SOUND',
+                        min: 0,
+                        max: 4096,
+                        precision: 1,
+                        check: 'Number'
+                    },
+                ],
+                colour: electronicColor,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.thingBotC3_setLed = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.THINGBOTC3_SET_LED,
+                args0: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'LED',
+                        options: [
+                            ['1', 'LED_1'],
+                            ['2', 'LED_2'],
+                        ]
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'BRIGHTNESS',
+                        min: 0,
+                        max: 4096,
+                        precision: 1,
+                        check: 'Number'
+                    }
+
+                ],
+                colour: electronicColor,
                 extensions: ['shape_statement']
             });
         }

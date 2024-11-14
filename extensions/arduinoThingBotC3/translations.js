@@ -16,9 +16,11 @@ function registerScratchExtensionTranslations() {
 function registerBlocksMessages(Blockly) {
   Object.assign(Blockly.ScratchMsgs.locales["en"], {
     "THINGBOTC3_CATEGORY": "ThingBot",
-    "THINGBOTC3_MOTOR_INIT": "init motor-servo controller",
+    "THINGBOTC3_INIT": "init board",
     "THINGBOTC3_SET_MOTOR": "set motor %1 go %2 at speed %3",
     "THINGBOTC3_SET_SERVO": "set servo %1 to pulse %2",
+    "THINGBOTC3_BUZZER": "set buzzer %1",
+    "THINGBOTC3_SET_LED": "set led %1 %2"
   });
 
   return Blockly;
@@ -27,5 +29,6 @@ function registerBlocksMessages(Blockly) {
 if (typeof module !== 'undefined') {
   module.exports = { getInterfaceTranslations };
 }
+
 exports = registerScratchExtensionTranslations;
 exports = registerBlocksMessages;

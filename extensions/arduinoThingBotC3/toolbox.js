@@ -22,6 +22,21 @@ function registerToolboxs() {
             </shadow>
         </value>
     </block>
+    <block type="thingBotC3_buzzer" id="thingBotC3_buzzer">
+        <value name="SOUND">
+            <shadow type="math_number">
+                <field name="NUM">0</field>
+            </shadow>
+        </value>
+    </block>
+    <block type="thingBotC3_setLed" id="tthingBotC3_setLed">
+        <field name="LED">LED_1</field>
+        <value name="BRIGHTNESS">
+            <shadow type="math_number" id="math_number">
+                <field name="NUM">0</field>
+            </shadow>
+        </value>
+    </block>
 </category>
 `;
 
