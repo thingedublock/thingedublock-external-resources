@@ -28,15 +28,15 @@ function registerGenerators (Blockly) {
         const speed = Blockly.Arduino.valueToCode(block, 'SPEED', Blockly.Arduino.ORDER_ATOMIC);
         const direction = block.getFieldValue('DIRECTION');
         if (direction == 'forward') {
-            return `pwm.setPin(M${motor}_A, 0, true);\npwm.setPWM(M${motor}_B, ${speed}, true);\n`;
+            return `pwm.setPWM(M${motor}_A, 0, 0);\npwm.setPWM(M${motor}_B, 0, ${speed});\n`;
         } else {
-            return `pwm.setPin(M${motor}_A, ${speed}, true);\npwm.setPWM(M${motor}_B, 0, true);\n`;
+            return `pwm.setPWM(M${motor}_A, 0, ${speed});\npwm.setPWM(M${motor}_B, 0, 0);\n`;
         }
     };
 
     Blockly.Arduino.thing_buzzer = function (block) {
         const sound = Blockly.Arduino.valueToCode(block, 'SOUND', Blockly.Arduino.ORDER_ATOMIC);
-        return `pwm.setPin(buzzer, ${sound}, true);\n`;
+        return `pwm.setPin(buzzer, 0, ${sound});\n`;
     };
     Blockly.Arduino.thing_setLed = function (block) {
         const led = block.getFieldValue('LED');
