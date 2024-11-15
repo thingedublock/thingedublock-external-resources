@@ -4,7 +4,7 @@ const coBot = formatMessage => ({
         default: 'ThingBot'
     }),
     deviceId: 'thingbot_esp32C3',
-    manufactor: 'MakerViet - ThingEdu',
+    manufactor: 'ThingEdu - Rogo Solutions',
     learnMore: '', // A link you can learn more about the device
     typeList: ['arduino'],
     iconURL: 'assets/thingbot.png',
