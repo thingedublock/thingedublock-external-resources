@@ -1,0 +1,9 @@
+{
+    "MEO_CATEGORY": "MEO Block",
+    "MEO_WIFI_CONFIG": "set wifi ssid %1 password %2",
+    "MEO_MQTT_CONFIG": "set mqtt server %1 port %2",
+    "MEO_FINAL_CONFIG": "finalize config (after wifi&mqtt)",
+    "MEO_CHECK_WIFI": "check connection",
+    "MEO_WIFI_RECONNECT": "reconnect",
+    "MEO_MQTT_PUBLISH": "mqtt publish message %1 topic %2"
+}
