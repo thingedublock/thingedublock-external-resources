@@ -26,10 +26,8 @@ module.exports = [
     // Third party
     'coBot_esp32C3',
     'coBot_arduinoEsp32C3',
+    'thingBot_esp32C3',
+    'thingBot_arduinoEsp32C3',
     'viaBanhMi_esp32',
-    'viaBanhMi_arduinoEsp32',
-    'thingbot_esp32C3',
-    'thingbot_arduinoEsp32C3',
-    'thing_esp32C3',
-    'thing_arduinoEsp32C3'
+    'viaBanhMi_arduinoEsp32'
 ];

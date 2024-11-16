@@ -5,12 +5,11 @@ function registerBlocks(Blockly) {
     const actuatorColor = '#cc0000';
     const electronicColor = '#6600ff';
 
-    Blockly.Blocks.thingBotC3_motorInit = {
+    Blockly.Blocks.thingBotC3_init = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.THINGBOTC3_MOTOR_INIT,
+                message0: Blockly.Msg.THINGBOTC3_INIT,
                 colour: color,
-                secondaryColour: secondaryColor,
                 extensions: ['shape_statement']
             });
         }

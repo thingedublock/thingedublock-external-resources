@@ -8,20 +8,20 @@
 function getInterfaceTranslations () {
     return {
         "en": {
-            "cobotc3.name": "Cobot v1",
-            "cobotc3.description": "Cobot is an educational robot product of ThingEdu Joint Stock Company."
+            "coBotC3.name": "Cobot v1",
+            "coBotC3.description": "Cobot is an educational robot product of ThingEdu Joint Stock Company."
         },
         "ru": {
-            "cobotc3.name": "Cobot v1",
-            "cobotc3.description": "Cobot is an educational robot product of ThingEdu Joint Stock Company."
+            "coBotC3.name": "Cobot v1",
+            "coBotC3.description": "Cobot is an educational robot product of ThingEdu Joint Stock Company."
         },
         "zh-cn": {
-            "cobotc3.name": "Cobot v1",
-            "cobotc3.description": "Cobot is an educational robot product of ThingEdu Joint Stock Company."
+            "coBotC3.name": "Cobot v1",
+            "coBotC3.description": "Cobot is an educational robot product of ThingEdu Joint Stock Company."
         },
         "zh-tw": {
-            "cobotc3.name": "Cobot v1",
-            "cobotc3.description": "Cobot is an educational robot product of ThingEdu Joint Stock Company."
+            "coBotC3.name": "Cobot v1",
+            "coBotC3.description": "Cobot is an educational robot product of ThingEdu Joint Stock Company."
         }
     }
     ;

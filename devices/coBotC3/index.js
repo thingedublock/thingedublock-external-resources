@@ -1,6 +1,6 @@
 const coBot = formatMessage => ({
     name: formatMessage({
-        id: 'cobotc3.name',
+        id: 'coBotC3.name',
         default: 'CoBot v1'
     }),
     deviceId: 'coBot_esp32C3',
@@ -9,7 +9,7 @@ const coBot = formatMessage => ({
     typeList: ['arduino'],
     iconURL: 'assets/cobot.png',
     description: formatMessage({
-        id: 'cobotc3.description',
+        id: 'coBotC3.description',
         default: 'CoBot by ThingEdu'
     }),
     featured: true,

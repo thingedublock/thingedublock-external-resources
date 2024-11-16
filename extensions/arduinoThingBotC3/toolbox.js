@@ -4,7 +4,7 @@ function registerToolboxs() {
 
     return `
 <category name="%{BKY_THINGBOTC3_CATEGORY}" id="THINGBOTC3_CATEGORY" colour="#42CCFF" secondaryColour="#42CCFF">
-    <block type="thingBotC3_motorInit" id="thingBotC3_motorInit"></block>
+    <block type="thingBotC3_init" id="thingBotC3_init"></block>
     <block type="thingBotC3_setMotor" id="thingBotC3_setMotor">
         <field name="MOTOR">1</field>
         <field name="DIRECTION">forward</field>
@@ -29,7 +29,7 @@ function registerToolboxs() {
             </shadow>
         </value>
     </block>
-    <block type="thingBotC3_setLed" id="tthingBotC3_setLed">
+    <block type="thingBotC3_setLed" id="thingBotC3_setLed">
         <field name="LED">LED_1</field>
         <value name="BRIGHTNESS">
             <shadow type="math_number" id="math_number">
@@ -37,8 +37,7 @@ function registerToolboxs() {
             </shadow>
         </value>
     </block>
-</category>
-`;
+</category>`;
 
 }
 

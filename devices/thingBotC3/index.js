@@ -1,10 +1,10 @@
-const coBot = formatMessage => ({
+const thingBot = formatMessage => ({
     name: formatMessage({
         id: 'thingbot.name',
         default: 'ThingBot'
     }),
-    deviceId: 'thingbot_esp32C3',
-    manufactor: 'ThingEdu - Rogo Solutions',
+    deviceId: 'thingBot_esp32C3',
+    manufactor: 'MakerViet - ThingEdu',
     learnMore: '', // A link you can learn more about the device
     typeList: ['arduino'],
     iconURL: 'assets/thingbot.png',
@@ -26,11 +26,11 @@ const coBot = formatMessage => ({
     defaultProgramMode: 'upload',
     programLanguage: ['block', 'c', 'cpp'],
     tags: ['kit'],
-    helpLink: 'https://github.com/makerviet/cobot-arduino'
+    helpLink: 'https://github.com/makerviet/thingBot-arduino'
 });
 
-const coBotArduino = formatMessage => {
-    const device = coBot(formatMessage);
+const thingBotArduino = formatMessage => {
+    const device = thingBot(formatMessage);
     device.defaultBaudRate = '115200';
     device.deviceId = 'thingBot_arduinoEsp32C3';
     device.programMode = ['realtime', 'upload'];
@@ -41,6 +41,6 @@ const coBotArduino = formatMessage => {
 };
 
 module.exports = formatMessage => ([
-    coBot(formatMessage),
-    coBotArduino(formatMessage)
+    thingBot(formatMessage),
+    thingBotArduino(formatMessage)
 ]);
