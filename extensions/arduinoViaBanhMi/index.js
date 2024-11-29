@@ -3,7 +3,7 @@ const arduinoViaBanhMi = () => ({
   extensionId: 'arduinoViaBanhMi',
   version: '1.0.0',
   supportDevice: ['viaBanhMi_arduinoEsp32', 'viaBanhMi_esp32'],
-  author: 'Rogo Solutions - ThingEdu',
+  author: 'MakerViet',
   blocks: 'blocks.js',
   generator: 'generator.js',
   toolbox: 'toolbox.js',

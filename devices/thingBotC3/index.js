@@ -4,7 +4,7 @@ const thingBot = formatMessage => ({
         default: 'ThingBot'
     }),
     deviceId: 'thingBot_esp32C3',
-    manufactor: 'MakerViet - ThingEdu',
+    manufactor: 'ThingEdu',
     learnMore: '', // A link you can learn more about the device
     typeList: ['arduino'],
     iconURL: 'assets/thingbot.png',
@@ -26,7 +26,7 @@ const thingBot = formatMessage => ({
     defaultProgramMode: 'upload',
     programLanguage: ['block', 'c', 'cpp'],
     tags: ['kit'],
-    helpLink: 'https://github.com/makerviet/thingBot-arduino'
+    helpLink: 'https://github.com/makerviet/cobot-arduino'
 });
 
 const thingBotArduino = formatMessage => {

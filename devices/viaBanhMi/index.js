@@ -4,7 +4,7 @@ const viaBanhMi = formatMessage => ({
         default: 'VIA Banh Mi'
     }),
     deviceId: 'viaBanhMi_esp32',
-    manufactor: 'MakerViet - VIA Team',
+    manufactor: 'MakerViet',
     learnMore: '', // A link you can learn more about the device
     typeList: ['arduino'],
     iconURL: 'assets/viaBanhMi.png',
