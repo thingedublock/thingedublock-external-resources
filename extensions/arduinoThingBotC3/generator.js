@@ -96,7 +96,7 @@ function registerGenerators(Blockly) {
     };
 
     Blockly.Arduino.thingBotC3_switch = function () {
-        const code = `digitalRead(SW)`;
+        const code = `!digitalRead(SW)`;
 
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     };
