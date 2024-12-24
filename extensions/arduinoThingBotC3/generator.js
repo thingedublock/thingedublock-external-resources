@@ -21,7 +21,6 @@ function registerGenerators(Blockly) {
         Blockly.Arduino.definitions_['define_M3_B'] = '#define M3_B 6';
         Blockly.Arduino.definitions_['define_M4_A'] = '#define M4_A 1';
         Blockly.Arduino.definitions_['define_M4_B'] = '#define M4_B 0';
-        Blockly.Arduino.definitions_['define_switch_pin'] = '#define SW 3';
 
         Blockly.Arduino.definitions_['define_SERVO_1'] = '#define SERVO_1 12';
         Blockly.Arduino.definitions_['define_SERVO_2'] = '#define SERVO_2 11';
@@ -30,6 +29,7 @@ function registerGenerators(Blockly) {
         Blockly.Arduino.definitions_['define_SERVO_5'] = '#define SERVO_5 8';
 
         Blockly.Arduino.definitions_['define_buzzer_pin'] = '#define BUZZER 14';
+        Blockly.Arduino.definitions_['define_switch_pin'] = '#define SW 3';
         Blockly.Arduino.definitions_['define_LED_1_pin'] = '#define LED_1 13';
         Blockly.Arduino.definitions_['define_LED_2_pin'] = '#define LED_2 15\n';
 
@@ -96,7 +96,7 @@ function registerGenerators(Blockly) {
     };
 
     Blockly.Arduino.thingBotC3_switch = function () {
-        const code = `analogRead(Switch) < 4095`;
+        const code = `digitalRead(SW)`;
 
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     };
