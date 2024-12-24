@@ -37,6 +37,8 @@ function registerToolboxs() {
             </shadow>
         </value>
     </block>
+    <block type="thingBotC3_initPS2" id="thingBotC3_initPS2"></block>
+    <block type="thingBotC3_switch" id="thingBotC3_switch"></block>
 </category>`;
 
 }

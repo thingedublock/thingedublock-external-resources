@@ -48,7 +48,7 @@ function registerBlocks(Blockly) {
                     }
                 ],
                 colour: actuatorColor,
-                extensions: ['shape_statement']
+                extensions: ['shape_statement'],
             });
         }
     };
@@ -129,6 +129,26 @@ function registerBlocks(Blockly) {
                 ],
                 colour: electronicColor,
                 extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.thingBotC3_initPS2 = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.THINGBOTC3_INIT_PS2,
+                colour: '#FF3399', // PS2 Lib color
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.thingBotC3_switch = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.THINGBOTC3_SWITCH,
+                colour: electronicColor,
+                extensions: ['output_boolean']
             });
         }
     };

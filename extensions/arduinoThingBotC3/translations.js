@@ -16,11 +16,13 @@ function registerScratchExtensionTranslations() {
 function registerBlocksMessages(Blockly) {
   Object.assign(Blockly.ScratchMsgs.locales["en"], {
     "THINGBOTC3_CATEGORY": "ThingBot",
-    "THINGBOTC3_INIT": "init board",
-    "THINGBOTC3_SET_MOTOR": "set motor %1 go %2 at speed %3",
+    "THINGBOTC3_INIT": "init ThingBot",
+    "THINGBOTC3_SET_MOTOR": "set motor %1 go %2 at %3 %speed",
     "THINGBOTC3_SET_SERVO": "set servo %1 to pulse %2",
-    "THINGBOTC3_BUZZER": "set buzzer %1",
-    "THINGBOTC3_SET_LED": "set led %1 %2"
+    "THINGBOTC3_BUZZER": "set buzzer to %1 pulse",
+    "THINGBOTC3_SET_LED": "set led %1 %2 %brightness",
+    "THINGBOTC3_INIT_PS2": "init PS2 on ThingBot",
+    "THINGBOTC3_SWITCH": "read switch",
   });
 
   return Blockly;
