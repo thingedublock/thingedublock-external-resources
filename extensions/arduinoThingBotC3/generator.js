@@ -35,7 +35,7 @@ function registerGenerators(Blockly) {
 
         Blockly.Arduino.definitions_.thing_motorInit = `Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();`;
 
-        return 'pwm.begin();\npwm.setOscillatorFrequency(27000000);\npwm.setPWMFreq(50);\n';
+        return 'pwm.begin();\npwm.setOscillatorFrequency(27000000);\npwm.setPWMFreq(50);\npinMode(SW, INPUT);\n';
     };
 
     Blockly.Arduino.thingBotC3_setMotor = function (block) {
