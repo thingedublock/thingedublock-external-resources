@@ -30,8 +30,8 @@ function registerGenerators(Blockly) {
 
         Blockly.Arduino.definitions_['define_buzzer_pin'] = '#define BUZZER 14';
         Blockly.Arduino.definitions_['define_switch_pin'] = '#define SW 3';
-        Blockly.Arduino.definitions_['define_LED_1_pin'] = '#define LED_1 13';
-        Blockly.Arduino.definitions_['define_LED_2_pin'] = '#define LED_2 15\n';
+        Blockly.Arduino.definitions_['define_LED_1_pin'] = '#define LED_1 15';
+        Blockly.Arduino.definitions_['define_LED_2_pin'] = '#define LED_2 13\n';
 
         Blockly.Arduino.definitions_.thing_motorInit = `Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();`;
 
@@ -89,7 +89,7 @@ function registerGenerators(Blockly) {
     Blockly.Arduino.thingBotC3_initPS2 = function () {
         Blockly.Arduino.includes_.thingBot_ps2Init = `#include <PS2X_lib.h>`
         Blockly.Arduino.definitions_['define_PS2_pin'] = `#define PS2_DAT 7   // DIN\n#define PS2_CMD 2   // DOUT\n#define PS2_SEL 10  // CS\n#define PS2_CLK 6   // CLK\n#define pressures false\n#define rumble false\n`;
-        Blockly.Arduino.definitions_.thing_ps2Init = `PS2X ps2;\n`;
+        Blockly.Arduino.definitions_.thing_ps2Init = `PS2X ps2x;\n`;
         Blockly.Arduino.definitions_.thing_ps2Config = `int error = 1;\nint tryNum = 1;`;
 
         return `while (error != 0) {\n\tdelay(1000);\n\terror = ps2x.config_gamepad(PS2_CLK, PS2_CMD, PS2_SEL, PS2_DAT, pressures, rumble);\n\tSerial.print("#try config ");\n\tSerial.println(tryNum);\n\ttryNum++;\n}\n`;
