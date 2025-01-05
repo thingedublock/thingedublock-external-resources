@@ -52,7 +52,7 @@ function registerGenerators(Blockly) {
             }
         }
 
-        mappedSpeed = parseInt(mapValue(speed, 0, 100, 0, 4095));
+        mappedSpeed = parseInt(mapValue(speed, 0, 100, 4095, 0));
 
         if (direction == 'forward') {
             return `pwm.setPWM(M${motor}_A, 0, 0);\npwm.setPWM(M${motor}_B, 0, ${mappedSpeed});\n`;
@@ -78,12 +78,12 @@ function registerGenerators(Blockly) {
         const brightness = Blockly.Arduino.valueToCode(block, 'BRIGHTNESS', Blockly.Arduino.ORDER_ATOMIC);
 
         if (isNaN(brightness)) {
-          return `pwm.setPin(${led}, ${brightness}, true);\n`;
+          return `pwm.setPin(${led}, ${brightness});\n`;
         }
 
         mappedBrightness = parseInt(mapValue(brightness, 0, 100, 0, 4095));
 
-        return `pwm.setPin(${led}, ${mappedBrightness}, true);\n`;
+        return `pwm.setPin(${led}, ${mappedBrightness});\n`;
     };
 
     Blockly.Arduino.thingBotC3_initPS2 = function () {
