@@ -33,7 +33,9 @@ function registerGenerators(Blockly) {
         Blockly.Arduino.definitions_['define_LED_1_pin'] = '#define LED_1 15';
         Blockly.Arduino.definitions_['define_LED_2_pin'] = '#define LED_2 13\n';
 
-        Blockly.Arduino.definitions_.thing_motorInit = `Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();`;
+        Blockly.Arduino.definitions_.thing_motorInit = `Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();\n`;
+
+        Blockly.Arduino.definitions_.mapToPulse = `int mapToPulse(int value) {\n\treturn map(min(100, max(0, value)), 0, 100, 0, 4095);\n}\n`;
 
         return 'pwm.begin();\npwm.setOscillatorFrequency(27000000);\npwm.setPWMFreq(50);\npinMode(SW, INPUT);\n';
     };
@@ -44,20 +46,10 @@ function registerGenerators(Blockly) {
         const direction = block.getFieldValue('DIRECTION');
 
         // Check if speed variable is not a number, perform generate speed with variable
-        if (isNaN(speed)) {
-            if (direction == 'forward') {
-                return `pwm.setPWM(M${motor}_A, 0, 0);\npwm.setPWM(M${motor}_B, 0, ${speed});\n`;
-            } else {
-                return `pwm.setPWM(M${motor}_A, 0, ${speed});\npwm.setPWM(M${motor}_B, 0, 0);\n`;
-            }
-        }
-
-        mappedSpeed = parseInt(mapValue(speed, 0, 100, 4095, 0));
-
         if (direction == 'forward') {
-            return `pwm.setPWM(M${motor}_A, 0, 0);\npwm.setPWM(M${motor}_B, 0, ${mappedSpeed});\n`;
+            return `pwm.setPWM(M${motor}_A, 0, 0);\npwm.setPWM(M${motor}_B, 0, mapToPulse(${speed}));\n`;
         } else {
-            return `pwm.setPWM(M${motor}_A, 0, ${mappedSpeed});\npwm.setPWM(M${motor}_B, 0, 0);\n`;
+            return `pwm.setPWM(M${motor}_A, 0, mapToPulse(${speed}));\npwm.setPWM(M${motor}_B, 0, 0);\n`;
         }
     };
 
@@ -77,13 +69,7 @@ function registerGenerators(Blockly) {
         const led = block.getFieldValue('LED');
         const brightness = Blockly.Arduino.valueToCode(block, 'BRIGHTNESS', Blockly.Arduino.ORDER_ATOMIC);
 
-        if (isNaN(brightness)) {
-          return `pwm.setPin(${led}, ${brightness});\n`;
-        }
-
-        mappedBrightness = parseInt(mapValue(brightness, 0, 100, 0, 4095));
-
-        return `pwm.setPin(${led}, ${mappedBrightness});\n`;
+        return `pwm.setPin(${led}, mapToPulse(${brightness}));\n`;
     };
 
     Blockly.Arduino.thingBotC3_initPS2 = function () {
